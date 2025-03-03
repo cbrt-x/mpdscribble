@@ -33,8 +33,7 @@ played_long_enough(std::chrono::steady_clock::duration elapsed,
 	   track is irrelevant as long as the appropriate amount has been
 	   played."
 	 */
-	return elapsed > std::chrono::minutes(4) ||
-		(length >= std::chrono::seconds(30) && elapsed > length / 2);
+	return elapsed > std::chrono::minutes(4) || elapsed > length / 2;
 }
 
 /**
